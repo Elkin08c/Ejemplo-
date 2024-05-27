@@ -30,11 +30,52 @@ INSERT INTO client (nui, fullname, phone, type_of_client, city, credit_limit) VA
 ```
 
 ### Mostrar el total de Nombres
-Para mostrar todos los nombres usamos la funcion **COUNT ()** pasandole commo un paramatre el campo , en este caso  *fullname*
+Para mostrar todos los nombres usamos la funcion **COUNT ()** pasandole como un paramatre el campo , en este caso  *fullname*
+
 ```
 SELECT COUNT (fullname) AS total_names 
 FROM client;
 ```
 - Capturas
+-![[COUNT-1.png]]
 
-<img src="../capturas/COUNT-1.png" width="500"/>
+### Mostrar  el total de Numeros
+Para mostrar todos los numeros de celular usamos la cuncion COUNT() pasandole como un parametro
+
+```
+SELECT COUNT (phone) AS total_phone
+FROM client;
+```
+- Capturas
+-![[COUNT-2.png]]
+
+### Mostrar el toal de Nombres y Numeros 
+Para poder mostrar el total de los numeros de telefono y nomres usamos la funcion COUNT 
+
+```
+SELECT COUNT (phone) AS total_phone, COUNT (fullname) AS total_name
+FROM client;
+```
+
+- Capturas
+-![[COUNT-3.png]]
+
+### Mostrar el total de las tablas
+Para poder mostrar el total de personas usamos el asterisco nos muestra el total de toda las tablas
+
+```
+SELECT COUNT (phone) AS total_phone, COUNT (fullname) AS total_name, COUNT (*) as total
+FROM client;
+```
+
+### Mostrar los valores repeticiones
+
+Esto nos ayuda a verificar los valores repetidos dentro de las tablas 
+
+```
+SELECT COUNT (DISTINCT city) AS total_cities
+FROM client
+```
+
+- Capturas
+-![[COUNT-5 1.png]]
