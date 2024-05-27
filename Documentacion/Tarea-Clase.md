@@ -36,4 +36,5 @@ SELECT COUNT (fullname) AS total_names
 FROM client;
 ```
 - Capturas
-<img src="./capturas/COUNT-1.png" alt="drawing" width="500"/>
+
+<img src="./capturas/COUNT-1.png" width="500"/>
